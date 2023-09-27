@@ -1,5 +1,6 @@
 package com.picpay.picpaysimplificado.domain.user;
 
+import com.picpay.picpaysimplificado.dto.UserDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,9 +19,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstname;
+    private String firstName;
 
-    private String lastname;
+    private String lastName;
 
     @Column(unique = true)
     private String document;
@@ -36,4 +37,13 @@ public class User {
     private UserType userType;
 
 
+    public User(UserDTO data) {
+        this.firstName = data.firstName();
+        this.lastName = data.lastName();
+        this.document = data.document();
+        this.email = data.email();
+        this.balance = data.balance();
+        this.password = data.password();
+        this.userType = data.userType();
+    }
 }
