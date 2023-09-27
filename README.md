@@ -21,3 +21,6 @@ POST /transaction - Registra uma nova transação.
 
 ## Database
 Esse projeto usa o database nativo do Spring, H2.
+
+
+# Projeto realizado em conjunto ao vídeo da Fernanda Kipper, com a apresentação e demonstração do desafio.
